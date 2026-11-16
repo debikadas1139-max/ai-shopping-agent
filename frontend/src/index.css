@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-leaf ring-offset-2 ring-offset-paper;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-leaf text-white hover:bg-leaf-deep;
+  }
+  .btn-secondary {
+    @apply btn border border-mist bg-white text-ink hover:bg-leaf-soft;
+  }
+  .btn-danger {
+    @apply btn text-berry hover:bg-berry-soft;
+  }
+  .input {
+    @apply w-full rounded-lg border border-mist bg-white px-3 py-2 text-sm text-ink placeholder:text-ink/50;
+  }
+  .card {
+    @apply rounded-xl border border-mist bg-white;
+  }
+  /* The memorable detail: prices look like the paper tags on a grocery shelf. */
+  .shelf-label {
+    @apply inline-block rounded-sm border border-ink/80 border-b-4 border-b-honey bg-white px-2 py-0.5 font-display text-lg font-bold leading-tight text-ink;
+  }
+}
+
+@keyframes dots {
+  0%,
+  80%,
+  100% {
+    opacity: 0.25;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+.typing-dot {
+  animation: dots 1.2s infinite ease-in-out;
+}
