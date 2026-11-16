@@ -189,6 +189,6 @@ pytest
 
 ## 📸 Screenshots
 
-- **Grocery Catalog & Filters:** `![Catalog View](screenshots/Catalog-image.png)`
-- **AI Shopping Assistant Chat:** `![AI Assistant](screenshots/Ai-assistance-image.png)`
-- **Visual Search (Shop by Image):** `![Visual Search](screenshots/Image-search.png)`
+- **Grocery Catalog & Filters:** ![Catalog View](screenshots/Catalog-image.png)
+- **AI Shopping Assistant Chat:** ![AI Assistant](screenshots/Ai-assistance-image.png)
+- **Visual Search (Shop by Image):** ![Visual Search](screenshots/Image-search.png)
